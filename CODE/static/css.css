@@ -1,0 +1,43 @@
+h1{
+       color: #1b243a;
+    align-content: center;
+}
+
+h2{
+       color: #205609;
+    align-content: center;
+}
+
+h3{
+    color: darkturquoise;
+
+}
+.abc {
+      display: block;
+     width: 50%;
+}
+
+.appli{
+        width: 50%;
+        height: 20%;
+}
+
+.mod{
+    background-color: #a8d8c6;
+}
+
+.cen{
+        align-items: center ;
+
+}
+
+
+
+.name{
+         background-color: #1c5a49 !important;
+}
+
+
+.card-img{
+    width:50vw
+}

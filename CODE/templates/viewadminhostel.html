@@ -1,0 +1,21 @@
+{% extends "adpage.html" %}
+{% block content %}
+<table border="2" class="form-control" style="overflow:scroll;height:25rem;">
+    <tr>
+      <th style="text-align: center"> Hostel Id</th>
+      <th style="text-align: center"> Hostel name</th>
+      <th style="text-align: center"> Rooms in hostel</th>
+      <th style="text-align: center"> Room Sharing</th>
+      <th style="text-align: center"> Hostel Location</th>
+      <th style="text-align: center"> hostel locate city</th> 
+      <th style="text-align: center" colspan="2"> fee Amount</th> 
+      <th style="text-align: center"> vacancies</th>
+      <th style="text-align: center"> contact us</th>
+    </tr>
+    {% for i in result %}
+        <tr style="text-align: center">
+            <td> {{ i[0] }}</td><td> {{ i[1] }}</td><td> {{ i[2] }}</td><td> {{ i[3] }}</td><td> {{ i[4] }}</td><td> {{ i[5] }}</td><td> {{ i[6] }}</td><td>{{ i[7] }}</td><td> {{ i[8] }}</td><td> {{ i[9] }}</td></tr>
+    {% endfor %}
+</table><br><br>
+<a href="{{ url_for('Hdetails') }}" class="btn btn-info"> Back</a>
+{% endblock %}

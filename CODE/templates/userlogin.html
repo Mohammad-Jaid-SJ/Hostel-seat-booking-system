@@ -1,0 +1,23 @@
+{% extends "home.html" %}
+{% block content %}
+
+    <div class="container" style="text-align: center">
+        <center>
+            <h2>{{msg}}</h2>
+        <form action="{{ url_for("login") }}" class="form-control" method='post' style="align-items: center;width:35rem;">
+            <h1>User Login Form </h1><br>
+            <div class="form-group">
+                <label style="width: 20%">User Email:</label>
+                <input type="email" class="form-control" placeholder="Enter User Email" name="un1" style="width:25rem" required>
+            </div>
+            <div class="form-group">
+                <label style="width: 20%">Password :</label>
+                <input type="password" class="form-control" placeholder="enter password" name="pd1" style="width:25rem" required>
+            </div>
+            <br>
+                <button type="submit" class="btn btn-info">submit</button>
+                <button type="reset" class="btn btn-info">Reset</button>
+        </form>
+        </center>
+    </div>
+{% endblock %}

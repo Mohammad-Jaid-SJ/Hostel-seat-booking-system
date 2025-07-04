@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>sign up</title>
+</head>
+<body>
+
+    <div class="container abc">
+
+            <div class="card-header ">
+                <h1> Admin Registration Form</h1><br>
+            </div>
+            <div class="card-body">
+                <form action="{{ url_for("areg") }}"  method='post' >
+                    <!--<span class="close-btn" onclick="closeForm()">X</span>-->
+
+                            <div class="form-group row">
+                                <label class="col-md-2 col-form-label text-md-right">User name:</label>
+
+                                <input type="text" class="form-group" placeholder="Enter user name" name="aun">
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-md-2 col-form-label text-md-right"> Password :</label>
+                                <input type="password" class="form-group" placeholder="Enter your password" name="apd">
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-2 col-form-label text-md-right">Confirm password:</label>
+                                <input type="password" class="form-group" placeholder="Re-enter your password" name="acpd">
+                            </div>
+                             <button type="submit" class="btn btn-info">submit</button>
+                            <button type="reset" class="btn btn-info">Reset</button>
+                </form>
+            </div>
+        </main>
+    </div>
+</main>
+<style>
+    .close-btn {
+    position: center;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.close-btn:hover {
+    background: darkred;
+}
+
+</style>
+<script>
+    function closeForm() {
+    document.querySelector(".container").style.display = "none";
+}
+
+</script>
+
+</body>
+</html>

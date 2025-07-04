@@ -1,0 +1,23 @@
+{% extends "adpage.html" %} {% block content %}
+<table
+  table
+  align="center"
+  border="1"
+  class="form-control"
+  style="width: 50rem; overflow: scroll"
+>
+  <center>
+    <tr>
+      <th>Feed back</th>
+      <th>Mail id:</th>
+    </tr>
+
+    {% for i in userfb %}
+    <tr>
+      <td>{{ i[0] }}</td>
+      <td>{{ i[1] }}</td>
+    </tr>
+    {% endfor %}
+  </center>
+</table>
+{% endblock %}

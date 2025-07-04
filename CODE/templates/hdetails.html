@@ -1,0 +1,42 @@
+{% extends "adpage.html" %}
+{% block content %}
+    <h2 style="color: darkviolet; font-weight: bold;">Add Hostel Details</h2>
+    <form action="{{ url_for('savepage') }}" class="form-control" method="post" style="width:40rem;">
+        <div class="form-group">
+            <label class="col-md-5 col-form-label text-md-right">Enter hostel_id:</label>
+            <input type="text" class="form-group" placeholder="hostel id no" name="hostelid" required>
+        </div>
+        <div class="form-group">
+            <label class="col-md-5 col-form-label text-md-right">Enter hostel name:</label>
+            <input type="text" class="form-group" placeholder="name" name="hostelname">
+        </div>
+        <div class="form-group">
+            <label class="col-md-5 col-form-label text-md-right">How many rooms:</label>
+            <input type="text" class="form-group" placeholder="available rooms" name="rooms">
+        </div>
+        
+        <div class="form-group">
+            <label class="col-md-5 col-form-label text-md-right">Room sharing:</label>
+            <input type="text" class="form-group" placeholder="people in room" name="roomsharing">
+        </div>
+        <div class="form-group">
+            <label class="col-md-5 col-form-label text-md-right">Enter location:</label>
+            <input type="text" class="form-group" placeholder="enter address" name="address">
+        </div>
+        <div class="form-group">
+            <label class="col-md-5 col-form-label text-md-right">Enter city:</label>
+            <input type="text" class="form-group" placeholder="enter city" name="city">
+        </div>
+        <div class="form-group">
+            <label class="col-md-5 col-form-label text-md-right">Enter fee amount:</label>
+            <input type="text" class="form-group" placeholder="enter fee amount" name="feeamount">
+        </div>
+        <div class="form-group">
+            <label class="col-md-5 col-form-label text-md-right">Contact us:</label>
+            <input type="text" class="form-group" placeholder="enter mobile no" name="contact">
+        </div>
+        <button type="submit" class="btn btn-info">Submit</button>
+        <button type="reset" class="btn btn-info">Reset</button>
+        <a href="{{ url_for('viewadmin') }}" class="btn btn-info">View</a>
+    </form>
+{% endblock %}

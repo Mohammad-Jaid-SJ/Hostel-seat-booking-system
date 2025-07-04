@@ -1,0 +1,29 @@
+{% extends "log.html" %} {% block content %}
+<table border="2" class="form-control" style="height: 25rem; overflow: scroll">
+  <tr>
+    <th style="text-align: center">Hostel Id</th>
+    <th style="text-align: center">Hostel name</th>
+    <th style="text-align: center">Rooms in hostel</th>
+    <th style="text-align: center">Room Sharing</th>
+    <th style="text-align: center">Hostel Location</th>
+    <th style="text-align: center">hostel locate city</th>
+    <th style="text-align: center" colspan="2">fees Amount</th>
+    <th style="text-align: center">vacancies</th>
+    <th style="text-align: center">contact us</th>
+  </tr>
+  {% for i in result %}
+  <tr>
+    <td style="text-align: center">{{ i[0] }}</td>
+    <td style="text-align: center">{{ i[1] }}</td>
+    <td style="text-align: center">{{ i[2] }}</td>
+    <td style="text-align: center">{{ i[3] }}</td>
+    <td style="text-align: center">{{ i[4] }}</td>
+    <td style="text-align: center">{{ i[5] }}</td>
+    <td style="text-align: center">{{ i[6] }}</td>
+    <td style="text-align: center">{{ i[7] }}</td>
+    <td style="text-align: center">{{ i[8] }}</td>
+  </tr>
+  {% endfor %}
+</table>
+<br /><br />
+{% endblock %}

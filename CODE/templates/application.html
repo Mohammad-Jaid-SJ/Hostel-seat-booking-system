@@ -1,0 +1,73 @@
+{% extends "log.html" %}
+{% block content %}
+
+<!-- Centered Form Container -->
+<div class="d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f8f9fa; padding: 2rem;">
+
+    {% for i in results %}
+    <div class="w-100" style="max-width: 1000px;">
+        <form action="{{ url_for('application') }}" method="post" 
+              class="form-control shadow-lg rounded" 
+              style="background-color: white; overflow-y: auto; max-height: 90vh; padding: 2rem;">
+
+            <h3 class="text-center mb-4"><u>Application Form of applicant</u></h3>
+
+            <div class="form-group">
+                <label>User ID:</label>
+                <input id="userid" value="{{ i[0] }}" type="text" class="form-control" name="uid" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>Username:</label>
+                <input value="{{ i[1] }}" type="text" class="form-control" name="un">
+            </div>
+
+            <div class="form-group">
+                <label>Email ID:</label>
+                <input value="{{ i[3] }}" type="email" class="form-control" name="mail" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>Mobile No:</label>
+                <input value="{{ i[4] }}" type="text" class="form-control" name="mn" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>Choose Hostel Type:</label>
+                <select class="form-control" name="ht">
+                    <option>choose</option>
+                    <option>A / C</option>
+                    <option>Non - A/C</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Choose Hostel:</label>
+                <select class="form-control" name="hn">
+                    <option>choose</option>
+                    <option>MS</option>
+                    <option>audi</option>
+                    <option>audisankara</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea class="form-control" rows="5" id="address" name="ad">{{ i[6] }}</textarea>
+            </div>
+
+            <p><strong>NOTE:</strong> 1. Hostel timings are 5:00AM to 9:00PM</p>
+            <p>2. Outsiders are not allowed in the hostel</p>
+
+            <div class="text-center mt-3">
+                <button type="submit" class="btn btn-info mx-2" style="width:30%;">Submit</button>
+                <button type="reset" class="btn btn-secondary mx-2" style="width:30%;">Reset</button>
+            </div>
+
+        </form>
+    </div>
+    {% endfor %}
+
+</div>
+
+{% endblock %}

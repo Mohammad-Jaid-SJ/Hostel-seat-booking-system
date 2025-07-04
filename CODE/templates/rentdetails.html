@@ -1,0 +1,37 @@
+{% extends "adpage.html" %} {% block content %}
+<div class="container">
+  <div class="form-group">
+    <table
+      class="form-control"
+      style="width: 90%; height: 60%; overflow: scroll"
+    >
+      <tr>
+        <th style="text-align: center">User Id</th>
+        <th style="text-align: center">User Name</th>
+        <th style="text-align: center">User Email</th>
+        <th style="text-align: center">Mobile Number</th>
+        <th style="text-align: center">Hostel Type</th>
+        <th style="text-align: center">Hostel Name</th>
+        <th style="text-align: center">Hostel Amount</th>
+        <th style="text-align: center">Card Number</th>
+        <th style="text-align: center">Date</th>
+        <th style="text-align: center">Status</th>
+      </tr>
+      {% for i in data %}
+      <tr>
+        <td style="text-align: center">{{ i[1] }}</td>
+        <td style="text-align: center">{{ i[2] }}</td>
+        <td style="text-align: center">{{ i[3] }}</td>
+        <td style="text-align: center">{{ i[4] }}</td>
+        <td style="text-align: center">{{ i[5] }}</td>
+        <td style="text-align: center">{{ i[6] }}</td>
+        <td style="text-align: center">{{ i[7] }}</td>
+        <td style="text-align: center">{{ i[8] }}</td>
+        <td style="text-align: center">{{ i[10] }}</td>
+        <td style="text-align: center">{{ i[11] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+{% endblock %}

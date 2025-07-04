@@ -1,0 +1,50 @@
+{% extends "home.html" %}
+{% block content %}
+{% if msg=="msg1" %}
+    <div class="container">
+        <div class="alert alert-warning alert-dismissible">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <h4> password is not matched</h4>
+        </div>
+    </div>
+{% endif %}
+{% if msg=="msg2" %}
+    <div class="container">
+        <div class="alert alert-warning alert-dismissible">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <h4> User name and password is mandatory</h4>
+        </div>
+    </div>
+{% endif %}
+<div class="container" style="text-align: center">
+  <center>
+    <form action="{{ url_for('adpage') }}" method="post" class="form-control" style="width:35rem;border-radius:10px;">
+        <!--<span class="close-btn" onclick="closeForm()">X</span>-->
+        <h1>Admin  Login Form </h1><br>
+        <div class="form-group">
+            <label style="width: 20%">User Email:</label>
+            <input type="email" class="form-control" placeholder="Enter User Email" name="aun" style="width:25rem;">
+        </div>
+        <br>
+        <div class="form-group">
+            <label style="width: 20%">User Password:</label>
+            <input type="password" class="form-control" placeholder="Enter password" name="apd" style="width:25rem;">
+        </div>
+        <br>
+
+
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary mb-3">Signin</button>
+        </div>
+    </form>
+  </center>
+ 
+
+ 
+<script>
+    function closeForm() {
+    document.querySelector(".container").style.display = "none";
+}
+
+</script>
+    {%  endblock %}

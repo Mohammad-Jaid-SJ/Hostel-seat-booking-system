@@ -1,0 +1,30 @@
+{% extends "adpage.html" %} {% block content %}
+<div class="container">
+  <div class="form-group">
+    <table
+      border="1"
+      class="form-control"
+      style="width: 50rem; overflow: scroll"
+    >
+      <tr>
+        <th style="text-align: center">username</th>
+        <th style="text-align: center">mail</th>
+        <th style="text-align: center">hostelname</th>
+        <th style="text-align: center">vacate</th>
+        <th style="text-align: center">reason</th>
+        <th style="text-align: center">date_time</th>
+      </tr>
+      {% for i in viewvacte %}
+      <tr>
+        <td style="text-align: center">{{ i[0] }}</td>
+        <td style="text-align: center">{{ i[1] }}</td>
+        <td style="text-align: center">{{ i[2] }}</td>
+        <td style="text-align: center">{{ i[3] }}</td>
+        <td style="text-align: center">{{ i[4] }}</td>
+        <td style="text-align: center">{{ i[5] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+{% endblock %}

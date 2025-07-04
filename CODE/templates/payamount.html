@@ -1,0 +1,79 @@
+{% extends "practice.html" %}
+{% block content %}
+
+<div class="container">
+   
+    <center>{{msg}}</center>
+    {% for i in data %}
+    <form  action="{{ url_for("rentpay") }}" class="form-control" method="post" style="overflow:scroll;height:30rem;">
+        <div class="row">
+            <h3> Rent Application Form</h3><br><br>
+
+            
+        <div class="form-group">
+            <label>User_id :</label>
+            <input id="userid" value="{{ i[0] }}" type="text" class="form-control" placeholder="enter your id" name="uid" readonly style="width:40%">
+        </div>
+  
+        <div class="form-group">
+            <label > Username:</label>
+            <input value="{{ i[2] }}" type="text" class="form-control" placeholder="your mail id" name="un" style="width:40%">
+        </div>
+        <div class="form-group">
+            <label > Email id :</label>
+            <input value="{{ i[3] }}" type="email" class="form-control" placeholder="your mail id" name="mail" readonly style="width:40%">
+        </div>
+        <div class="form-group">
+            <label > Mobile No:</label>
+            <input value="{{ i[4] }}" type="text" class="form-control" placeholder="enter your mobile number" name="mn" readonly  style="width:40%">
+        </div>
+        <div class="form-group">
+           <div class="dropdown">
+               <strong><lable  for="shell"> Choose Hostel type:</lable></strong>
+                  <select class="form-control" id="shel1" name="ht" style="width:40%">
+                      <option>Hostel Room Type</option>
+                      <option>A / C - 7000</option>
+                      <option>Non - A/C - 5000</option>
+                  </select>
+            </div>
+        </div>
+        <div class="form-group">
+           <div class="dropdown">
+               <strong><lable  for="shell"> Choose Hostel:</lable></strong>
+
+                  <select class="form-control" id="sel1" name="hn" style="width:40%">
+                    <option selected>Hostel Name</option>
+                    {% for hostel in data1 %}
+                    <option>{{hostel[0]}}</option>
+                    {% endfor %}
+                  </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Amount :</label>
+            <input type="text" class="form-control" placeholder="Enter Amount" name="amount"  style="width:40%" required>
+        </div>
+
+        <div class="form-group">
+            <label>Card Number  :</label>
+            <input type="number" pattern="[0-9]{16}" min="0" class="form-control" placeholder="Enter Card Number" name="cardnumber"  style="width:40%" required>
+        </div>
+
+        <div class="form-group">
+            <label>Card CVV  :</label>
+            <input type="password" class="form-control" placeholder="Enter CVV" name="cvv"  style="width:40%" required>
+        </div>
+        
+        <p> <strong> NOTE:</strong> 1.Hostel timings 5:00AM to 9:00PM</p>
+        <p> 2. Other than hostel peoples  are not allowed to hostel</p>
+        <center>
+        <button type="submit" class="btn btn-info" style="width:10%"> Submit </button>
+
+        <button type="reset" class="btn btn-info" style="width:10%"> Reset </button>
+        </center>
+        <!--<a href="{{ url_for("vacate") }}" class="btn btn-info" role="button"> view</a>-->
+    </form>
+    {% endfor %}
+</div>
+{% endblock %}

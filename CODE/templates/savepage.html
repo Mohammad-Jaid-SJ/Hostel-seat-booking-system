@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>page saving</title>
+</head>
+<body>
+
+<div class="container">
+
+
+    <form action="{{ url_for("hostel") }}" method="post">
+        <div class="form-group">
+             <table border="1">
+                <tr>
+                    <th> Hostel id</th>
+                    <th> Hostel name</th>
+                    <th> A/C Rooms in hostel</th>
+                    <th> Non A/C rooms in hostel</th>
+                    <th> Room Sharing</th>
+                    <th> hostel location</th>
+                    <th> hostel located city</th>
+                    <th> ac fees particulors</th>
+                    <th>non ac fees particulors</th>
+                    <th> vacancy in ac rooms</th>
+                    <th> vacancy in non ac rooms</th>
+                    <th> Contact us</th>
+                </tr>
+
+               <tr>
+                    <td> {{ hostelid }} </td>
+                    <td> {{ hostelname }} </td>
+                    <td> {{ acrooms }} </td>
+                    <td> {{ nonacrooms }}</td>
+                    <td> {{ roomsharing }}</td>
+                    <td> {{ address }} </td>
+                    <td> {{ city }} </td>
+                    <td>{{ acrfee }} </td>
+                    <td> {{ non_acrfee }} </td>
+                    <td> {{ contact }}</td>
+                </tr>
+
+             </table>
+        </div>
+    </form>
+
+</div>
+</body>
+</html>
